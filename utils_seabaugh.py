@@ -1,4 +1,4 @@
-'''  ITERATION 4
+'''  ITERATION 5
 
 Module: Stellar Analytics - Reusable Module for My Data Analytics Projects
 
@@ -6,10 +6,9 @@ This module provides a simple, reusable foundation for my analytics projects.
 
 Process:
 
-In this fourth iteration, I introduce some basic statistics using Python.
-    - min() is a built in function to find the smallest value passed in
-    - max() is a built in function to find the largest value passed in
-    - The statistics module offers methods to calculate mean and standard deviation.
+In this iteration, I enhance the byline to include calculated statistics. 
+This makes the byline more informative and professional, 
+ready for use in future projects.
 '''
 
 #####################################
@@ -66,10 +65,10 @@ max_score: float = max(client_satisfaction_scores)
 mean_score: float = statistics.mean(client_satisfaction_scores)  
 stdev_score: float = statistics.stdev(client_satisfaction_scores)
 
-cpl_min_score: float = min(clients_per_location)  
-cpl_max_score: float = max(clients_per_location)  
-cpl_mean_score: float = statistics.mean(clients_per_location)  
-cpl_stdev_score: float = statistics.stdev(clients_per_location)
+min_cpl: float = min(clients_per_location)  
+max_cpl: float = max(clients_per_location)  
+mean_cpl: float = statistics.mean(clients_per_location)  
+stdev_cpl: float = statistics.stdev(clients_per_location)
 
 #####################################
 # Declare a global variable named byline. 
@@ -88,6 +87,14 @@ Accepting New Clients:      {accepting_new_clients}
 Number of Employees:        {number_of_employees}
 Locations of Clients:       {locations_of_clients}
 Clients per Location:       {clients_per_location}
+Minimum Satisfaction Score: {min_score}
+Maximum Satisfaction Score: {max_score}
+Mean Satisfaction Score:    {mean_score:.2f}
+Standard Deviation:         {stdev_score:.2f}
+Minimum CPL:                {min_cpl}
+Maximum CPL:                {max_cpl}
+Mean CPL:                   {mean_cpl}
+Standard Deviation CPL:     {stdev_cpl}
 """
 
 #####################################
