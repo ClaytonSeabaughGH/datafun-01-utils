@@ -1,4 +1,4 @@
-'''  ITERATION 3
+'''  ITERATION 4
 
 Module: Stellar Analytics - Reusable Module for My Data Analytics Projects
 
@@ -6,13 +6,27 @@ This module provides a simple, reusable foundation for my analytics projects.
 
 Process:
 
-In this third iteration, I declare additional variables to show skills with different data types.
-
+In this fourth iteration, I introduce some basic statistics using Python.
+    - min() is a built in function to find the smallest value passed in
+    - max() is a built in function to find the largest value passed in
+    - The statistics module offers methods to calculate mean and standard deviation.
 '''
 
 #####################################
-# Declare global variables - keep byline at the end
-# We will use this information in a smarter byline
+# Import Modules at the Top
+#####################################
+
+# In Python, we can import modules to add extra tools and functions.
+# Below, we're importing:
+# - `statistics`: This gives us tools to calculate things like averages.
+# Use CTRL F and type statistics to see where it is used in the code. 
+# Did you find statistics.mean()?
+# Did you find statistics.stdev()?
+
+import statistics
+
+#####################################
+# Declare global variables
 #####################################
 
 # Boolean variable to indicate if the company has international clients
@@ -38,6 +52,25 @@ locations_of_clients: list = ["United States", "United Kingdom","France","German
 
 # List of floats representing amount of clinets per location
 clients_per_location: list = [51, 32, 24, 13]
+
+#####################################
+# Calculate Basic Statistics 
+#   Do this BEFORE we declare the byline 
+#   So the values have been calculated 
+#   and are ready for use in the byline.
+#####################################
+
+# Calculate basic stats using built-in functions min(), max() and statistics module functions mean() and stdev().
+min_score: float = min(client_satisfaction_scores)  
+max_score: float = max(client_satisfaction_scores)  
+mean_score: float = statistics.mean(client_satisfaction_scores)  
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
+
+cpl_min_score: float = min(clients_per_location)  
+cpl_max_score: float = max(clients_per_location)  
+cpl_mean_score: float = statistics.mean(clients_per_location)  
+cpl_stdev_score: float = statistics.stdev(clients_per_location)
+
 #####################################
 # Declare a global variable named byline. 
 # Make it a multiline f-string to show our information.
