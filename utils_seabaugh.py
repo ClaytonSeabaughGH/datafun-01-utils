@@ -15,12 +15,6 @@ ready for use in future projects.
 # Import Modules at the Top
 #####################################
 
-# In Python, we can import modules to add extra tools and functions.
-# Below, we're importing:
-# - `statistics`: This gives us tools to calculate things like averages.
-# Use CTRL F and type statistics to see where it is used in the code. 
-# Did you find statistics.mean()?
-# Did you find statistics.stdev()?
 
 import statistics
 
@@ -54,9 +48,6 @@ clients_per_location: list = [51, 32, 24, 13]
 
 #####################################
 # Calculate Basic Statistics 
-#   Do this BEFORE we declare the byline 
-#   So the values have been calculated 
-#   and are ready for use in the byline.
 #####################################
 
 # Calculate basic stats using built-in functions min(), max() and statistics module functions mean() and stdev().
